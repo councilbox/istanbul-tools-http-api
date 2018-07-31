@@ -30,11 +30,11 @@ class Decode(Resource):
                 if kv[0] == 'validator':
                     if not 'validators' in result_dict:
                         result_dict['validators'] = []
-                    result_dict['validators'].append(kv[1])
+                    result_dict['validators'].append(kv[1].strip())
                 elif kv[0] == 'committed seal':
                     if not 'committed_seals' in result_dict:
                         result_dict['committed_seals'] = []
-                    result_dict['committed_seals'].append(kv[1])
+                    result_dict['committed_seals'].append(kv[1].strip())
                 else:
                     result_dict[kv[0].strip()] = kv[1].strip()
         return result_dict, 200

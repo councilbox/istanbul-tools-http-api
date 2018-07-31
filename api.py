@@ -3,7 +3,7 @@
 
 import yaml
 from flask import Flask
-from flask_restful import reqparse, abort, Api, Resource
+from flask_restful import Api
 from flask_cors import CORS
 from services import extra
 from conf import conf_loader as conf
